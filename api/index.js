@@ -27,7 +27,6 @@ app.use(express.static(path.join(__dirname,'/client/dist')));
 app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname, 'client', 'dist', 'index.html'));
   });
-// middleware for errors
 
 app.use((err,req,res,next)=>{
     const statusCode = err.statusCode || 500;
